@@ -93,6 +93,7 @@ nav ul {
 nav li {
 	padding: 0 10px;
 	font-size: 1.2em;
+	cursor: pointer;
 }
 
 li:hover {
@@ -137,6 +138,31 @@ li:hover {
 	width: 100%;
 
 }
+.filters {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+	margin-top: 50px;
+
+}
+.filters button {
+	min-width: 100px;
+	box-sizing: border-box;
+	height: 37px;
+	border: 1px solid #1D6154;
+	border-radius: 60px;
+	color: #1D6154;
+	margin-right: 10px;
+	font-size: 16px;
+	font-family: 'Syne', sans-serif;
+	cursor: pointer;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.filters button:hover {
+	background-color: #1D6154;
+	color: white;
+}
 #contact {
 	width: 50%;
 margin: auto;
@@ -178,6 +204,7 @@ input[type="submit"]{
 	width: 180px;
 	text-align: center;
 	border-radius: 60px ;
+	cursor: pointer;
 }
 
 footer nav ul {
