@@ -3,272 +3,511 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
-	background-color: #FFFEF8;
+  line-height: 1;
+  background-color: #fffef8;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 /** end reset css**/
 body {
-	max-width: 1140px;
-	margin:auto;
-	font-family: 'Work Sans' ;
-	font-size: 14px;
+  max-width: 1140px;
+  margin: auto;
+  font-family: "Work Sans";
+  font-size: 14px;
 }
 header {
-	display: flex;
-	justify-content: space-between;
-	margin: 50px 0
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
 }
 section {
-	margin: 50px 0
+  margin: 50px 0;
 }
 a {
-	text-decoration: none;
+  text-decoration: none;
+  color: black;
 }
 
-h1{
-	display: flex;
-	flex-direction: column;
-	font-family: 'Syne';
-	font-size: 22px;
-	font-weight: 800;
-	color: #B1663C
+h1 {
+  display: flex;
+  flex-direction: column;
+  font-family: "Syne";
+  font-size: 22px;
+  font-weight: 800;
+  color: #b1663c;
 }
 
 h1 > span {
-	font-family: 'Work Sans';
-	font-size:10px;
-	letter-spacing: 0.1em;
-;
+  font-family: "Work Sans";
+  font-size: 10px;
+  letter-spacing: 0.1em;
 }
 
-h2{
-	font-family: 'Syne';
-	font-weight: 700;
-	font-size: 30px;
-	color: #1D6154
+h2 {
+  font-family: "Syne";
+  font-weight: 700;
+  font-size: 30px;
+  color: #1d6154;
 }
 nav ul {
-	display: flex;
-	align-items: center;
-	list-style-type: none;
-
+  display: flex;
+  align-items: center;
+  list-style-type: none;
 }
 nav li {
-	padding: 0 10px;
-	font-size: 1.2em;
-	cursor: pointer;
+  padding: 0 10px;
+  font-size: 1.2em;
+  cursor: pointer;
 }
 
 li:hover {
-	color: #B1663C;
+  color: #b1663c;
 }
 #introduction {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 #introduction figure {
-	flex: 1
+  flex: 1;
 }
 #introduction img {
-	display: block;
-	margin: auto;
-	width: 80%;
+  display: block;
+  margin: auto;
+  width: 80%;
 }
 
 #introduction article {
-	flex: 1
+  flex: 1;
 }
 #introduction h2 {
-	margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 #introduction p {
-	margin-bottom: 0.5em;
+  margin-bottom: 0.5em;
 }
 #portfolio h2 {
-	text-align: center;
-	margin-bottom: 1em;
+  text-align: center;
+  margin-bottom: 1em;
+  padding-top: 25px;
 }
 .gallery {
-	width: 100%;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-column-gap: 20px;
-	grid-row-gap: 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
 }
 
 .gallery img {
-	width: 100%;
-
+  width: 100%;
 }
 .filters {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 50px;
-	margin-top: 50px;
-
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 .filters button {
-	min-width: 100px;
-	box-sizing: border-box;
-	height: 37px;
-	border: 1px solid #1D6154;
-	border-radius: 60px;
-	color: #1D6154;
-	margin-right: 10px;
-	font-size: 16px;
-	font-family: 'Syne', sans-serif;
-	cursor: pointer;
-	padding-right: 10px;
-	padding-left: 10px;
+  min-width: 100px;
+  box-sizing: border-box;
+  height: 37px;
+  border: 1px solid #1d6154;
+  border-radius: 60px;
+  color: #1d6154;
+  margin-right: 10px;
+  font-size: 16px;
+  font-family: "Syne", sans-serif;
+  cursor: pointer;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 .filters button:hover {
-	background-color: #1D6154;
-	color: white;
+  background-color: #1d6154;
+  color: white;
 }
 #contact {
-	width: 50%;
-margin: auto;
+  width: 50%;
+  margin: auto;
 }
 #contact > * {
-	text-align: center;
-
+  text-align: center;
 }
-#contact h2{
-	margin-bottom: 20px;
+#contact h2 {
+  margin-bottom: 20px;
 }
 #contact form {
-	text-align: left;
-	margin-top:30px;
-	display: flex;
-	flex-direction: column;
+  text-align: left;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 #contact input {
-	height: 50px;
-	font-size: 1.2em;
-	border: none;
-	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  height: 50px;
+  font-size: 1.2em;
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
 #contact label {
-	margin: 2em 0 1em 0;
+  margin: 2em 0 1em 0;
 }
 #contact textarea {
-	border: none;
-	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
 
-input[type="submit"]{
-	font-family: 'Syne';
-	font-weight: 700;
-	color: white;
-	background-color: #1D6154;
-	margin : 2em auto ;
-	width: 180px;
-	text-align: center;
-	border-radius: 60px ;
-	cursor: pointer;
+input[type="submit"] {
+  font-family: "Syne";
+  font-weight: 700;
+  color: white;
+  background-color: #1d6154;
+  margin: 2em auto;
+  width: 180px;
+  text-align: center;
+  border-radius: 60px;
+  cursor: pointer;
 }
 
 footer nav ul {
-	display: flex;
-	justify-content: flex-end;
-	margin: 2em
+  display: flex;
+  justify-content: flex-end;
+  margin: 2em;
 }
 
-
 .login {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-top: 200px;
-	margin-bottom: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
+  margin-bottom: 50%;
 }
 
 .login form {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .login label {
-	margin-bottom: 7px;
-	margin-top: 30px;
+  margin-bottom: 7px;
+  margin-top: 30px;
 }
 
 .login input {
-	width: 379px;
-	height: 51px;
-	border: none;
-	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  width: 379px;
+  height: 51px;
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  padding-left: 10px;
 }
 
 .login h2 {
-	margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .login p {
-	text-decoration-line: underline;
-	cursor: pointer;
-	text-align: center;
+  text-decoration-line: underline;
+  cursor: pointer;
+  text-align: center;
 }
 
 .legal-notice {
-	height: 60px;
-	background-color: white;
+  height: 60px;
+  background-color: white;
 }
 
 .legal-notice li {
-	padding-top: 20px;
+  padding-top: 20px;
 }
 
 #connexion {
-	width: 179px;
-	height: 36px;
-	margin-top: 47px;
-	margin-bottom: 37px;
+  width: 179px;
+  height: 36px;
+  margin-top: 47px;
+  margin-bottom: 37px;
 }
 
 .connexion-header {
-	margin-left: 50px;
+  margin-left: 50px;
+}
+#error-container {
+  margin-bottom: 15px;
+  margin-top: -15px;
+  text-align: center;
+}
+.login-text {
+  text-decoration: none;
+}
+
+.logout-text {
+  text-decoration: none;
+}
+
+#edition-block {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.edition-input {
+  background-color: white;
+  border-radius: 60px;
+  height: 38px;
+  width: 216px;
+  text-align: center;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.edition-button {
+  color: white;
+  border: none;
+  font-size: 16px;
+  margin-right: 21px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+i {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects h2 {
+  margin-right: 30px;
+}
+
+.projects p {
+  cursor: pointer;
+}
+
+figcaption {
+  margin-left: 58px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+#modal {
+  width: 630px;
+  height: 735px;
+  background: white;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  border: none;
+}
+
+#modal h3 {
+  font-size: 26px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.close-modal {
+  border: none;
+  background-color: transparent;
+  float: right;
+  margin-top: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.add-button {
+  border: none;
+  border-radius: 60px;
+  height: 36px;
+  width: 237px;
+  text-align: center;
+  margin-top: 40px;
+  color: white;
+  background-color: #1D6154;
+  cursor: pointer;
+  margin-left: 200px;
+}
+
+hr {
+  border: none;
+  width: 420px;
+  border: 1px solid;
+  color: #B3B3B3;
+  margin-top: 30px;
+}
+
+.delete {
+  color: red;
+  margin-top: 23px;
+  margin-bottom: 48px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.gallery-modal {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-column-gap: 3px;
+	margin: 46px 100px 10px 100px;
+	position: relative;
+
+}
+
+.gallery-modal figure {
+	position: relative;
+}
+
+.gallery-modal img {
+	width: 78px;
+	height: 104px;
+}
+
+#modal figcaption {
+	margin-left: 0;
+	margin-top: 3px;
+	margin-bottom: 10px;
+}
+
+.delete-icon {
+	width: 14px;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	color: white;
+	background-color: black;
+	border-radius: 5px;
+	padding: 5px;
+	margin-right: 5px;
 }
