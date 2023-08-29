@@ -47,10 +47,14 @@ const navList = document.getElementById("navigation-list");
 
 // Fonction pour mettre à jour l'affichage des boutons en fonction de la connexion
 function updateNavForAuthState(isLoggedIn) {
-  if (isLoggedIn) {
-    document.querySelector('.login-text').textContent = 'logout';
-  } else {
-    document.querySelector('.login-text').textContent = 'login';
+  const loginTextElement = document.querySelector('.login-text');
+  
+  if (loginTextElement) {
+    if (isLoggedIn) {
+      loginTextElement.textContent = 'logout';
+    } else {
+      loginTextElement.textContent = 'login';
+    }
   }
 }
 
