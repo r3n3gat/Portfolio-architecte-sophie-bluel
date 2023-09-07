@@ -54,24 +54,34 @@ function filterAllClick() {
   updateGallery(allWorks)
 }
 
-function filterByCategory(categoryName) {
-  const filtered = allWorks.filter(
-    (work) =>
-      work.categoryId ===
-      categories.find((category) => category.name === categoryName).id
-  );
-  updateGallery(filtered)
+function findCategoryIdByName(categoryName) {
+  const category = categories.find((category) => category.name === categoryName);
+  return category ? category.id : null;
 }
+
+function filterByCategory(categoryName) {
+  const categoryId = findCategoryIdByName(categoryName);
+
+  if (!categoryId) {
+    console.error("Catégorie non trouvée:", categoryName);
+    return;
+  }
+
+  const filtered = allWorks.filter((work) => work.categoryId === categoryId);
+  updateGallery(filtered);
+}
+
 
 async function initProject() {
   try {
     categories = await fetchCategories();
     allWorks = await fetchWorks();
   } catch (error) {
-    console.error("Erreur lors de l'initialisation des données:", error);
+    console.error("Erreur lors de l'initialisation des données:", error)
   }
 }
-
+// Création des listener avec simplification d'écriture/lecture : document.getElementById("filters-all")
+ //                                                               document.addEventListener("click", filterAllClick)
 document
   .getElementById("filters-all")
   .addEventListener("click", filterAllClick)
