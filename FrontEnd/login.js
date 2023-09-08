@@ -40,33 +40,3 @@ loginForm.addEventListener("submit", (event) => {
     });
 });
 
-
-
-// Récupèrer la liste d'éléments
-const navList = document.getElementById("navigation-list");
-
-// Fonction pour mettre à jour l'affichage des boutons en fonction de la connexion
-function updateNavForAuthState(isLoggedIn) {
-  const loginTextElement = document.querySelector('.login-text');
-  
-  if (loginTextElement) {
-    if (isLoggedIn) {
-      loginTextElement.textContent = 'logout';
-    } else {
-      loginTextElement.textContent = 'login';
-    }
-  }
-}
-
-// Lancer la fonction pour décider quel bouton montrer
-updateNavForAuthState(!!localStorage.getItem("token"));
-
-// Ajout clic pour la déconnexion
-
-  navList.addEventListener('click', (event) => {
-    if (event.target.classList.contains('login-text') && event.target.textContent === 'logout') {
-      localStorage.removeItem("token");
-      window.location.href = "index.html";
-    }
-  });
-  

@@ -1,126 +1,142 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sophie Bluel - Architecte d'intérieur</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet" type="text/css"
+    />
+    <meta name="description" content="" />
+    <!--Ajout de l'attribut `type="text/css"` non necessaire mais signalé en erreur pas w3c-->
+    <link rel="stylesheet" href="./assets/style.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Syne:wght@700&display=swap" rel="stylesheet" type="text/css"
+    />
+    <script src="https://kit.fontawesome.com/1b67ca9c39.js" crossorigin="anonymous"
+    ></script>
+    <script src="script.js" defer></script>
+  </head>
 
-	<meta charset="UTF-8">
-	<title>Sophie Bluel - Architecte d'intérieur</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet" type="text/css">
-	<meta name="description" content="">
-	<!--Ajout de l'attribut `type="text/css"` non necessaire mais signalé en erreur pas w3c-->
-	<link rel="stylesheet" href="./assets/style.css" type="text/css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Syne:wght@700&display=swap" rel="stylesheet" type="text/css">
-	<script src="https://kit.fontawesome.com/1b67ca9c39.js" crossorigin="anonymous"></script>
-	<script src="script.js" defer></script>
+  <body>
+    <div id="edition-block" class="hidden">
+      <button class="edition-button show-modal">
+        <i class="fa-regular fa-pen-to-square"></i>Mode édition
+      </button>
+      <input class="edition-input" value="Publier les changements" />
+    </div>
 
-</head>
-
-<body>
-
-	<div id="edition-block" class="hidden">
-		<button class="edition-button show-modal"><i class="fa-regular fa-pen-to-square"></i>Mode édition</button>
-		<input class="edition-input" value="Publier les changements">
-	</div>
-
-<header>
-	<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
-	<nav>
-		<ul>
-			<li>projets</li>
-			<li>contact</li>
-			<li><a href="login.html" id="login-text">login</a></li>
-			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
-		</ul>
-	</nav>
-</header>
-<main>
-	<section id="introduction">
-		<figure>
-			<img src="./assets/images/sophie-bluel.png" alt="Photo de Sophie">
-			<figcaption class="figcaption hidden show-modal"><i
-				class="fa-regular fa-pen-to-square hidden"></i>modifier</figcaption>
-		</figure>
-		<article>
-			<h2>Designer d'espace</h2>
-			<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p>
-			<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
-			<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
-		</article>
-	</section>
-	<section id="portfolio">
-		<div class="projects">
-			<h2>Mes Projets</h2>
-			<i class="fa-regular fa-pen-to-square hidden show-modal"></i>
-			<p class="hidden show-modal">modifier</p>
-		</div>
-			<div class="filters">
-				<button id="filters-all">Tous</button>
-				<button id="filters-objects">Objets</button>
-				<button id="filters-appartments">Appartements</button>
-				<button id="filters-hotels">Hôtels & restaurants</button>
-			</div>
-		<div class="gallery" id="galleryContainer">
-		</div>
-	</section>
-	<section id="contact">
-		<h2>Contact</h2>
-		<p>Vous avez un projet ? Discutons-en !</p>
-		<form action="#" method="post">
-			<label for="name">Nom</label>
-			<input type="text" name="name" id="name">
-			<label for="email">Email</label>
-			<input type="email" name="email" id="email">
-			<label for="message">Message</label>
-			<textarea name="message" id="message" cols="30" rows="10"></textarea>
-			<input type="submit" value="Envoyer">
-		</form>
-	</section>
-	<dialog id="modal" class="modal">
-		<button class="close-modal"><i class="fa-solid fa-xmark fa-xl"></i></button>
-		<h3>Galerie photo</h3>
-		<!-- Création de la galerie modale en js -->
-		<div class="gallery-modal">
-		</div>
-		<hr>
-		<input type="button" class="add-button" value="Ajouter une photo">
-		<p class="delete">Supprimer la galerie</p>
-	</dialog>
-	<dialog id="workModal" class="modal workModal">
-		<button id="backToGalleryButton" class="back-button"><i class="fa-solid fa-arrow-left fa-xl"></i></button>
-		<button class="close-modal close-work-modal"><i class="fa-solid fa-xmark fa-xl"></i></button>
-		<h3>Ajout photo</h3>
-		<form class="form">
+    <header>
+      <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
+      <nav>
+        <ul id="navigation-list">
+          <li>projets</li>
+          <li>contact</li>
+          <li><a href="login.html" id="loginText">login</a></li>
+          <li><img src="./assets/icons/instagram.png" alt="Instagram" /></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="introduction">
+        <figure>
+          <img src="./assets/images/sophie-bluel.png" alt="Photo de Sophie" />
+          <figcaption class="figcaption hidden show-modal">
+            <i class="fa-regular fa-pen-to-square hidden"></i>modifier
+          </figcaption>
+        </figure>
+        <article>
+          <h2>Designer d'espace</h2>
+          <p>
+            Je raconte votre histoire, je valorise vos idées. Je vous accompagne
+            de la conception à la livraison finale du chantier.
+          </p>
+          <p>
+            Chaque projet sera étudié en commun, de façon à mettre en valeur les
+            volumes, les matières et les couleurs dans le respect de l’esprit
+            des lieux et le choix adapté des matériaux. Le suivi du chantier
+            sera assuré dans le souci du détail, le respect du planning et du
+            budget.
+          </p>
+          <p>
+            En cas de besoin, une équipe pluridisciplinaire peut-être constituée
+            : architecte DPLG, décorateur(trice)
+          </p>
+        </article>
+      </section>
+      <section id="portfolio">
+        <div class="projects">
+          <h2>Mes Projets</h2>
+          <i class="fa-regular fa-pen-to-square hidden show-modal"></i>
+          <p class="hidden show-modal">modifier</p>
+        </div>
+        <div class="filters">
+          <button id="filters-all">Tous</button>
+          <button id="filters-objects">Objets</button>
+          <button id="filters-appartments">Appartements</button>
+          <button id="filters-hotels">Hôtels & restaurants</button>
+        </div>
+        <div class="gallery" id="galleryContainer"></div>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Vous avez un projet ? Discutons-en !</p>
+        <form action="#" method="post">
+          <label for="name">Nom</label>
+          <input type="text" name="name" id="name" />
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" />
+          <label for="message">Message</label>
+          <textarea name="message" id="message" cols="30" rows="10"></textarea>
+          <input type="submit" value="Envoyer" />
+        </form>
+      </section>
+      <dialog id="modal" class="modal">
+        <button class="close-modal">
+          <i class="fa-solid fa-xmark fa-xl"></i>
+        </button>
+        <h3>Galerie photo</h3>
+        <!-- Création de la galerie modale en js -->
+        <div class="gallery-modal"></div>
+        <hr />
+        <input type="button" class="add-button" value="Ajouter une photo" id="addWorkButton" />
+        <p class="delete">Supprimer la galerie</p>
+      </dialog>
+      <dialog id="workModal" class="modal workModal">
+		<button id="backToModalButton" class="back-button"><i class="fa-solid fa-arrow-left fa-xl"></i></button>
+        <button class="close-modal close-work-modal"><i class="fa-solid fa-xmark fa-xl"></i></button>
+        <h3>Ajout photo</h3>
+		<form class="form" id="form">
 			<div class="rectangle">
-				<i class="fa-regular fa-image fa-2xl"></i>
-				<input type="text" id="uploadButton" class="add-work-button" value="+ Ajouter photo">
-				<div id="photo-preview"></div>
-				<p>jpg, png : 4mo max</p>
-			</div>
-			<section class="form-fields">
-				<label for="workTitle">Titre</label>
-				<input type="text" id="workTitle" class="modal-input" required>
-				
-				<label for="workCategory">Catégorie</label>
-				<select id="workCategory" class="modal-input" required>
-					<!-- dynamically generated options (via js) will be placed here -->
-				</select>
-			</section>
-			<hr>
-			<button type="submit" class="submit-button">Valider</button>
-		</form>
-	</dialog>
-</main>
+            <i class="fa-regular fa-image fa-2xl"></i>
+			<label for="uploadButton" class="add-work-button" id="uploadButtonLabel">+ Ajouter photo</label>
+			<input type="file" id="uploadButton" style="display: none;">
+			<div id="photo-preview" class="photo-preview"></div>
+            <p>jpg, png : 4mo max</p>
+          </div>
+          <section class="form-fields">
+            <label for="workTitle">Titre</label>
+            <input type="text" id="workTitle" class="modal-input" required />
 
-<footer>
-	<nav>
-		<ul>
-			<li>Mentions Légales</li>
-		</ul>
-	</nav>
-</footer>
-</body>
+            <label for="workCategory">Catégorie</label>
+            <select id="workCategory" class="modal-input" required>
+              <!-- generation des options (via js) -->
+            </select>
+          </section>
+          <hr />
+		  <button type="submit" class="submit-button" id="submitButtonModal">Valider</button>
+        </form>
+      </dialog>
+    </main>
+
+    <footer>
+      <nav>
+        <ul>
+          <li>Mentions Légales</li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
 </html>
