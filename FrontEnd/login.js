@@ -39,4 +39,3 @@ loginForm.addEventListener("submit", (event) => {
       console.error("Erreur dans l’identifiant ou le mot de passe", error);
     });
 });
-

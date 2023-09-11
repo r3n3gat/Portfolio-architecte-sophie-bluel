@@ -455,7 +455,7 @@ figcaption {
   text-align: center;
   margin-top: 40px;
   color: white;
-  background-color: #1D6154;
+  background-color: #1d6154;
   cursor: pointer;
   margin-left: 200px;
 }
@@ -464,7 +464,7 @@ hr {
   border: none;
   width: 420px;
   border: 1px solid;
-  color: #B3B3B3;
+  color: #b3b3b3;
   margin-top: 30px;
 }
 
@@ -477,130 +477,129 @@ hr {
 }
 
 .gallery-modal {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-	grid-column-gap: 3px;
-	margin: 46px 100px 10px 100px;
-	position: relative;
-
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 3px;
+  margin: 46px 100px 10px 100px;
+  position: relative;
 }
 
 .gallery-modal figure {
-	position: relative;
+  position: relative;
 }
 
 .gallery-modal img {
-	width: 78px;
-	height: 104px;
+  width: 78px;
+  height: 104px;
 }
 
 #modal figcaption {
-	margin-left: 0;
-	margin-top: 3px;
-	margin-bottom: 10px;
+  margin-left: 0;
+  margin-top: 3px;
+  margin-bottom: 10px;
 }
 
 .delete-icon {
-	width: 14px;
-	position: absolute;
-	right: 5px;
-	top: 5px;
-	color: white;
-	background-color: black;
-	border-radius: 5px;
-	padding: 5px;
-	margin-right: 5px;
+  width: 14px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 5px;
 }
 .back-button {
-	background-color: transparent;
-	border-style: none;
-	margin-top: 25px;
-	margin-left: 15px;
+  background-color: transparent;
+  border-style: none;
+  margin-top: 25px;
+  margin-left: 15px;
 }
 
 .submit-button {
-	width: 237px;
-	height: 36px;
-	border-radius: 60px;
-	background-color: #A7A7A7;
-	color: white;
-	border-style: none;
-	margin-top: 30px;
-	cursor: pointer;
-	font-family: 'syne';
+  width: 237px;
+  height: 36px;
+  border-radius: 60px;
+  background-color: #a7a7a7;
+  color: white;
+  border-style: none;
+  margin-top: 30px;
+  cursor: pointer;
+  font-family: "syne";
 }
 .submit-button-green {
-	background-color: #1D6154;
+  background-color: #1d6154;
 }
 
 .form {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .rectangle {
-	width: 420px;
-	height: 169px;
-	background-color: #E8F1F6;
-	border-radius: 3px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	margin-bottom: 30px;
-	margin-top: 30px;
+  width: 420px;
+  height: 169px;
+  background-color: #e8f1f6;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .add-work-button {
   display: inline-block;
-	background-color: #CBD6DC;
-	color: #306685;
-	width: 173px;
-	height: 36px;
-	border-radius: 50px;
-	border-style: none;
-	text-align: center;
-	margin-top: 30px;
-	cursor: pointer;
+  background-color: #cbd6dc;
+  color: #306685;
+  width: 173px;
+  height: 36px;
+  border-radius: 50px;
+  border-style: none;
+  text-align: center;
+  margin-top: 30px;
+  cursor: pointer;
   line-height: 36px;
 }
 
 form p {
-	size: 10px;
-	margin-top: 7px;
+  font-size: 10px;
+  margin-top: 7px;
 }
 
 .modal-input {
-	background-color: #FFFFFF;
-	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
-	border-style: none;
-	width: 420px;
-	height: 51px;
-	margin-top: 10px;
-	margin-bottom: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  border-style: none;
+  width: 420px;
+  height: 51px;
+  margin-top: 10px;
+  margin-bottom: 20px;
   padding-left: 5px;
-	font-size: 14px;
-	color: #444444;
+  font-size: 14px;
+  color: #444444;
 }
 
 form i {
-	color: #B9C5CC;
+  color: #b9c5cc;
 }
 
 .form-fields {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .preview-image {
-	max-width: 100%;
-	max-height: 420px;
+  max-width: 100%;
+  max-height: 420px;
 }
 .submit-button-active {
-	background-color: #1D6154;
+  background-color: #1d6154;
 }
 label {
-	color: #3D3D3D
+  color: #3d3d3d;
 }
