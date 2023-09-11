@@ -9,6 +9,7 @@ function updateGallery(works) {
   // re-créér la galerie
   works.forEach((work) => {
     const figure = document.createElement("figure")
+    figure.setAttribute('data-work-id', work.id)
     const image = document.createElement("img")
     image.src = work.imageUrl
     const figcaption = document.createElement("figcaption")
@@ -23,6 +24,7 @@ function updateGallery(works) {
 async function fetchAndDisplayWorks() {
   try {
     const works = await fetchWorks()
+    allWorks = works
     updateGallery(works)
   } catch (error) {
     console.error("Failed to fetch and display works:", error)
@@ -33,7 +35,6 @@ async function fetchAndDisplayWorks() {
 fetchAndDisplayWorks()
 
 let allWorks = []
-let categories = []
 
 async function fetchCategories() {
   const response = await fetch("http://localhost:5678/api/categories")
@@ -52,51 +53,33 @@ async function fetchWorks() {
   return (await response.json()) || []
 }
 
-function filterAllClick() {
-  updateGallery(allWorks)
-}
 
-function findCategoryIdByName(categoryName) {
-  const category = categories.find(
-    (category) => category.name === categoryName
-  )
-  return category ? category.id : null
-}
-
-function filterByCategory(categoryName) {
-  const categoryId = findCategoryIdByName(categoryName)
-
-  if (!categoryId) {
-    console.error("Category not found:", categoryName)
-    return
+function filterWorksByCategory(categoryId) {
+  if (categoryId === "") {  // Attribut vide du html pour le bouton "Tous"
+    updateGallery(allWorks);
+    return;
   }
 
-  const filtered = allWorks.filter((work) => work.categoryId === categoryId)
+  const filtered = allWorks.filter(work => work.categoryId === parseInt(categoryId));
   updateGallery(filtered);
 }
 
 async function initProject() {
   try {
-    categories = await fetchCategories()
     allWorks = await fetchWorks()
   } catch (error) {
     console.error("Error during data initialization:", error)
   }
 }
-document
-  .getElementById("filters-all")
-  .addEventListener("click", filterAllClick)
-document
-  .getElementById("filters-objects")
-  .addEventListener("click", () => filterByCategory("Objets"))
-document
-  .getElementById("filters-appartments")
-  .addEventListener("click", () => filterByCategory("Appartements"))
-document
-  .getElementById("filters-hotels")
-  .addEventListener("click", () => filterByCategory("Hotels & restaurants"))
 
-initProject()
+document.querySelectorAll('.filters button').forEach(button => {
+  button.addEventListener('click', function() {
+    const categoryId = this.getAttribute('data-category-id');
+    filterWorksByCategory(categoryId);
+  });
+});
+
+initProject();
 
 const loginText = document.getElementById("loginText")
 
@@ -113,6 +96,7 @@ if (userAuthenticated) {
 const modal = document.getElementById("modal")
 const workModal = document.getElementById("workModal")
 const showModal = document.querySelectorAll(".show-modal")
+const galleryModal = document.querySelector(".gallery-modal")
 
 const openModal = () => {
   modal.showModal()
@@ -177,10 +161,7 @@ fetch("http://localhost:5678/api/works")
       galleryModal.appendChild(figure)
       deleteIcon.addEventListener('click', (event) => {
         event.preventDefault()
-        // Ajout d'une fenêtre de confirmation de suppression ...
-        if (window.confirm("Êtes-vous sûr de vouloir supprimer cette image?")) {
           deleteWork(work.id)
-        }
       })
     })
   })
@@ -198,7 +179,7 @@ function deleteWork(id) {
     .then((response) => {
       if (response.ok) {
         console.log("work deleted")
-        removeWorkOnGallery(id); // Effacer un projet de la galerie
+        removeWorkOnGallery(id) // Effacer un projet de la galerie
       } else {
         console.error("Deletion failed")
       }

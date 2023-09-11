@@ -27,7 +27,7 @@ loginForm.addEventListener("submit", (event) => {
       }
     })
     .then((response) => {
-      // token storage + redirection si response 200
+      // token storage + redirection si reponse 200
       localStorage.setItem("token", response.token);
       location.href = "index.html";
     })
