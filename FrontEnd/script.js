@@ -37,7 +37,8 @@ fetchAndDisplayWorks();
 let allWorks = [];
 
 async function fetchCategories() {
-  const response = await fetch("http://localhost:5678/api/categories");
+  const apiWorks = await fetch("http://localhost:5678/api/categories");
+  const response = await fetch(apiWorks)
   if (!response.ok) {
     throw new Error("Erreur lors de la récupération des catégories");
   }
@@ -45,8 +46,8 @@ async function fetchCategories() {
 }
 
 async function fetchWorks() {
-  const apiURL = "http://localhost:5678/api/works";
-  const response = await fetch(apiURL);
+  const apiUrl = "http://localhost:5678/api/works";
+  const response = await fetch(apiUrl);
   if (!response.ok) {
     throw new Error("Erreur lors de la récupération des projets");
   }
