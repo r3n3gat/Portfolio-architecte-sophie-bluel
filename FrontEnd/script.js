@@ -37,7 +37,7 @@ fetchAndDisplayWorks();
 let allWorks = [];
 
 async function fetchCategories() {
-  const apiWorks = await fetch("http://localhost:5678/api/categories");
+  const apiWorks = "http://localhost:5678/api/categories";
   const response = await fetch(apiWorks)
   if (!response.ok) {
     throw new Error("Erreur lors de la récupération des catégories");
